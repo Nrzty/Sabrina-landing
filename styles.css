@@ -7,6 +7,9 @@
   --black: #1c1917;
   --white: #fffaf4;
   --line: rgba(71, 61, 53, 0.18);
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Manrope", Arial, sans-serif;
 }
@@ -83,8 +86,8 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(3.8rem, 7.5vw, 6.85rem);
-  line-height: 0.86;
+  font-size: clamp(3.5rem, 6.5vw, 5.8rem);
+  line-height: 0.92;
   margin-bottom: 30px;
   max-width: 740px;
 }
@@ -104,6 +107,7 @@ h3 {
 .button {
   align-items: center;
   background: var(--copper);
+  border-radius: var(--radius-sm);
   color: var(--black);
   display: inline-flex;
   font-size: 0.72rem;
@@ -138,6 +142,38 @@ h3 {
   z-index: 10;
 }
 
+.site-header::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(238, 169, 84, 0.72) 28%,
+    rgba(243, 237, 228, 0.86) 50%,
+    rgba(238, 169, 84, 0.72) 72%,
+    transparent
+  );
+  bottom: -1px;
+  box-shadow: 0 3px 12px rgba(238, 169, 84, 0.28);
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  animation: header-divider-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes header-divider-pulse {
+  0%,
+  100% {
+    opacity: 0.72;
+    box-shadow: 0 3px 12px rgba(238, 169, 84, 0.2);
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 3px 18px rgba(238, 169, 84, 0.52);
+  }
+}
+
 .nav {
   align-items: center;
   display: flex;
@@ -148,12 +184,12 @@ h3 {
 .brand {
   align-items: center;
   display: flex;
-  max-width: 270px;
+  max-width: 330px;
 }
 
 .brand-logo {
   height: auto;
-  max-height: 54px;
+  max-height: 64px;
   object-fit: contain;
   width: 100%;
 }
@@ -193,7 +229,13 @@ h3 {
 }
 
 .hero::before {
-  background: linear-gradient(90deg, rgba(28, 25, 23, 0.94) 0%, rgba(28, 25, 23, 0.7) 42%, rgba(28, 25, 23, 0.1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(28, 25, 23, 0.78) 0%,
+    rgba(28, 25, 23, 0.46) 42%,
+    rgba(28, 25, 23, 0.08) 78%,
+    transparent 100%
+  );
   content: "";
   inset: 0;
   position: absolute;
@@ -201,13 +243,14 @@ h3 {
 }
 
 .hero-photo {
+  border-radius: 0;
   height: 100%;
-  inset: 0 0 0 42%;
+  inset: 0;
   object-fit: cover;
   object-position: center 26%;
-  opacity: 0.88;
+  opacity: 1;
   position: absolute;
-  width: 58%;
+  width: 100%;
 }
 
 .hero-inner {
@@ -225,6 +268,8 @@ h3 {
 
 .hero h1 {
   color: var(--white);
+  letter-spacing: -0.025em;
+  max-width: 700px;
 }
 
 .hero h1 em {
@@ -234,8 +279,9 @@ h3 {
 
 .hero-description {
   color: var(--sand);
-  font-size: 1rem;
-  max-width: 470px;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  max-width: 510px;
 }
 
 .hero-footer {
@@ -301,9 +347,11 @@ h3 {
 }
 
 .intro-copy {
-  border-top: 1px solid var(--line);
+  background: rgba(255, 250, 244, 0.68);
+  border: 1px solid rgba(71, 61, 53, 0.08);
+  border-radius: var(--radius-md);
   color: var(--ink);
-  padding-top: 24px;
+  padding: 28px;
 }
 
 .intro-copy p {
@@ -353,6 +401,10 @@ h3 {
 }
 
 .practice-list {
+  background: rgba(255, 250, 244, 0.26);
+  border: 1px solid rgba(119, 79, 37, 0.2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
   border-top: 1px solid rgba(119, 79, 37, 0.4);
 }
 
@@ -414,6 +466,7 @@ h3 {
 }
 
 .profile-photo {
+  border-radius: var(--radius-lg);
   height: 590px;
   object-fit: cover;
   object-position: center 18%;
@@ -421,7 +474,8 @@ h3 {
 }
 
 .profile-detail-photo {
-  border: 10px solid var(--white);
+  border: 8px solid var(--white);
+  border-radius: var(--radius-md);
   bottom: -42px;
   height: 270px;
   object-fit: cover;
@@ -485,7 +539,10 @@ h3 {
 }
 
 .credential-list {
+  background: rgba(28, 25, 23, 0.2);
+  border: 1px solid rgba(243, 237, 228, 0.2);
   border-left: 1px solid rgba(243, 237, 228, 0.3);
+  border-radius: var(--radius-md);
   display: grid;
   gap: 20px;
   padding-left: 30px;
@@ -574,22 +631,88 @@ footer {
   font-size: 1.2rem;
 }
 
+.whatsapp-widget {
+  align-items: end;
+  bottom: 24px;
+  display: flex;
+  gap: 12px;
+  position: fixed;
+  right: 24px;
+  z-index: 20;
+}
+
+.whatsapp-prompt {
+  background: var(--white);
+  border: 1px solid rgba(71, 61, 53, 0.14);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(28, 25, 23, 0.16);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7rem;
+  line-height: 1.35;
+  max-width: 230px;
+  padding: 13px 18px;
+  position: relative;
+}
+
+.whatsapp-prompt::after {
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid var(--white);
+  border-top: 8px solid transparent;
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.whatsapp-prompt strong {
+  color: var(--brown);
+  font-size: 0.78rem;
+  margin-bottom: 3px;
+}
+
+.whatsapp-prompt-badge,
+.whatsapp-badge {
+  align-items: center;
+  background: #e53935;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  color: var(--white);
+  display: flex;
+  font-size: 0.62rem;
+  font-weight: 700;
+  height: 20px;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  width: 20px;
+}
+
+.whatsapp-prompt-badge {
+  right: 10px;
+  top: -10px;
+}
+
 .whatsapp-float {
   align-items: center;
   background: #25d366;
   border: 3px solid var(--white);
   border-radius: 50%;
-  bottom: 24px;
   box-shadow: 0 8px 24px rgba(28, 25, 23, 0.22);
   color: var(--white);
   display: flex;
   height: 58px;
   justify-content: center;
-  position: fixed;
-  right: 24px;
+  position: relative;
   transition: transform 180ms ease, box-shadow 180ms ease;
   width: 58px;
-  z-index: 20;
+}
+
+.whatsapp-badge {
+  right: -4px;
+  top: -5px;
 }
 
 .whatsapp-float:hover,
@@ -633,12 +756,16 @@ footer {
 
   .hero-photo {
     inset: 0;
-    opacity: 0.45;
+    opacity: 1;
     width: 100%;
   }
 
   .hero::before {
-    background: linear-gradient(90deg, rgba(28, 25, 23, 0.96), rgba(28, 25, 23, 0.48));
+    background: linear-gradient(
+      90deg,
+      rgba(28, 25, 23, 0.82),
+      rgba(28, 25, 23, 0.34)
+    );
   }
 
   .hero-content {
@@ -647,7 +774,8 @@ footer {
   }
 
   .hero h1 {
-    font-size: clamp(3.5rem, 17vw, 5.8rem);
+    font-size: clamp(3.25rem, 14vw, 5.2rem);
+    line-height: 0.94;
   }
 
   .intro-grid,
@@ -711,7 +839,7 @@ footer {
   }
 
   .brand {
-    max-width: 220px;
+    max-width: 260px;
   }
 
   .nav-contact {
@@ -739,15 +867,24 @@ footer {
   }
 
   .whatsapp-float {
-    bottom: 18px;
     height: 52px;
-    right: 16px;
     width: 52px;
   }
 
   .whatsapp-float svg {
     height: 26px;
     width: 26px;
+  }
+
+  .whatsapp-widget {
+    bottom: 18px;
+    right: 16px;
+  }
+
+  .whatsapp-prompt {
+    font-size: 0.64rem;
+    max-width: 190px;
+    padding: 11px 14px;
   }
 }
 
@@ -759,6 +896,8 @@ footer {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
