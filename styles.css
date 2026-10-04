@@ -306,6 +306,253 @@ h3 {
   margin-top: 42px;
 }
 
+.reviews-highlight {
+  background: var(--brown);
+  color: var(--ivory);
+  padding: 25px 0;
+}
+
+.reviews-highlight-inner {
+  align-items: center;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1.1fr 1fr auto;
+  justify-content: space-between;
+  max-width: 1000px;
+}
+
+.reviews-brand {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+}
+
+.google-icon {
+  align-items: center;
+  background: var(--ivory);
+  border-radius: var(--radius-sm);
+  display: flex;
+  height: 54px;
+  justify-content: center;
+  width: 54px;
+}
+
+.google-icon svg {
+  height: 32px;
+  width: 32px;
+}
+
+.reviews-brand > div {
+  display: grid;
+  gap: 2px;
+}
+
+.reviews-kicker {
+  color: var(--sand);
+  font-family: "Poppins", var(--sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.reviews-brand strong {
+  color: var(--white);
+  font-family: "IvyPresto Display", "IvyPresto", var(--serif);
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.reviews-stars {
+  color: var(--copper);
+  font-size: 0.86rem;
+  letter-spacing: 0.1em;
+}
+
+.reviews-social-proof {
+  align-items: center;
+  color: var(--sand);
+  display: flex;
+  font-family: "Poppins", var(--sans);
+  font-size: 0.68rem;
+  gap: 13px;
+}
+
+.review-avatars {
+  display: flex;
+  padding-left: 10px;
+}
+
+.review-avatars span,
+.review-initial {
+  align-items: center;
+  background: var(--brown);
+  border: 2px solid var(--ivory);
+  border-radius: 50%;
+  color: var(--white);
+  display: flex;
+  font-family: "Poppins", var(--sans);
+  font-weight: 600;
+  height: 52px;
+  justify-content: center;
+  margin-left: -10px;
+  width: 52px;
+}
+
+.review-avatars span:nth-child(2) {
+  background: var(--copper);
+}
+
+.review-avatars span:nth-child(3) {
+  background: var(--ink);
+}
+
+.review-avatars span:nth-child(4) {
+  background: var(--teste);
+}
+
+.reviews-cta {
+  align-items: center;
+  background: var(--copper);
+  border: 0;
+  border-radius: 999px;
+  color: var(--black);
+  display: inline-flex;
+  font-family: "Poppins", var(--sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  gap: 13px;
+  letter-spacing: 0.05em;
+  padding: 12px 17px;
+  text-transform: uppercase;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.reviews-cta:hover,
+.reviews-cta:focus-visible {
+  background: var(--white);
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+.reviews-page {
+  background: var(--ivory);
+}
+
+.reviews-hero {
+  background:
+    linear-gradient(rgba(71, 45, 23, 0.78), rgba(71, 45, 23, 0.78)),
+    url("assets/images/a2501707-4bcc-4baf-8f2f-e512de592bfa.jpg") center 42% /
+      cover;
+  color: var(--white);
+  min-height: 560px;
+  padding: 190px 0 120px;
+}
+
+.reviews-hero .eyebrow {
+  color: var(--copper);
+  font-family: "Poppins", var(--sans);
+}
+
+.reviews-hero .eyebrow::before {
+  display: none;
+}
+
+.reviews-hero h1 {
+  color: var(--white);
+  font-family: "IvyPresto Display", "IvyPresto", var(--serif);
+  font-size: clamp(3.2rem, 6vw, 5.8rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  margin: 24px 0 18px;
+  max-width: 760px;
+}
+
+.reviews-hero p {
+  color: var(--ivory);
+  font-family: "Poppins", var(--sans);
+  font-size: 0.86rem;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.reviews-list-section {
+  background: var(--ivory);
+  padding: 90px 0;
+}
+
+.reviews-list {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.review-card {
+  background: var(--white);
+  border: 1px solid rgba(119, 79, 37, 0.16);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 26px rgba(71, 61, 53, 0.1);
+  padding: 28px;
+}
+
+.review-card p::before {
+  color: var(--copper);
+  content: "“";
+  font-family: "IvyPresto Display", "IvyPresto", var(--serif);
+  font-size: 2.4rem;
+  line-height: 0;
+  margin-right: 4px;
+  vertical-align: -0.45em;
+}
+
+.review-card-heading {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.review-card-heading h2 {
+  color: var(--brown);
+  font-family: "Poppins", var(--sans);
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  margin: 0 0 4px;
+}
+
+.review-card-heading div > span {
+  color: var(--brown);
+  font-family: "Poppins", var(--sans);
+  font-size: 0.7rem;
+}
+
+.review-card p {
+  color: var(--ink);
+  font-family: "Poppins", var(--sans);
+  font-size: 0.86rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.review-initial-green {
+  background: var(--copper);
+}
+
+.review-initial-light {
+  background: var(--teste);
+}
+
+.review-initial-purple {
+  background: var(--ink);
+}
+
+.reviews-source {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
 .hero-note {
   color: var(--sand);
   font-size: 0.74rem;
@@ -1299,6 +1546,35 @@ footer {
 
   .contact-info {
     min-height: auto;
+  }
+
+  .reviews-highlight-inner {
+    align-items: start;
+    gap: 14px;
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-social-proof {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .reviews-cta {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .reviews-list {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-hero {
+    min-height: 500px;
+    padding: 160px 0 86px;
+  }
+
+  .reviews-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 4.2rem);
   }
 
   .whatsapp-float {
