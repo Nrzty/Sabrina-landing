@@ -8,11 +8,20 @@
       content="Sabrina Alexia Advocacia e Consultoria Jurídica. Atuação estratégica em Direito de Família, Sucessões, Patrimônio e Direito Imobiliário."
     />
     <title>Sabrina Alexia | Advocacia e Consultoria Jurídica</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/MARCA D'ÁGUA BEGE PNG.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -44,7 +53,10 @@
         />
         <div class="container hero-inner">
           <div class="hero-content">
-            <h1>Um espaço pensado para decisões com <em>segurança e estratégia.</em></h1>
+            <h1>
+              Um espaço pensado em<br class="hero-title-break" />
+              decisões com <em>segurança e estratégia.</em>
+            </h1>
             <p class="hero-description">
               No escritório Sabrina Alexia, cada detalhe acolhe você para uma
               atuação jurídica próxima, técnica e cuidadosa.
@@ -54,27 +66,32 @@
             </div>
           </div>
         </div>
-        <a class="scroll-cue" href="#atuacao">Conheça o escritório</a>
       </section>
 
       <section class="introduction" id="sobre">
         <div class="container intro-grid">
-          <p class="intro-lead">
-            Uma advocacia para momentos que pedem segurança, sensibilidade e
-            direção.
-          </p>
+          <div class="intro-lead-wrap">
+            <span class="eyebrow">Nossa Essência</span>
+            <p class="intro-lead">
+              Uma advocacia para momentos que pedem segurança, sensibilidade e
+              direção.
+            </p>
+          </div>
           <div class="intro-copy">
             <p>
-              Sabrina Alexia é advogada e sócia idealizadora do escritório
-              Sabrina Alexia Advocacia e Consultoria Jurídica. Sua prática une
-              conhecimento técnico e uma compreensão cuidadosa de cada história.
+              <strong>Cada caso começa pela compreensão do que realmente importa.</strong>
             </p>
             <p>
-              O trabalho é construído a partir das particularidades de cada
-              pessoa, família e patrimônio — com orientação clara para decisões
-              mais conscientes.
+              O Sabrina Alexia Advocacia desenvolve uma atuação técnica e
+              individualizada, construída a partir das particularidades de cada
+              demanda.
             </p>
-            <a class="text-link" href="#contato">Conheça a abordagem <span>↗</span></a>
+            <p>
+              Com orientação clara, acompanhamento próximo e análise
+              estratégica, o escritório busca oferecer segurança jurídica para
+              decisões pessoais, profissionais e patrimoniais.
+            </p>
+            <a class="text-link" href="#contato">Nossa Forma de Atuar <span>↗</span></a>
           </div>
         </div>
       </section>
@@ -82,53 +99,20 @@
       <section class="practice" id="atuacao">
         <div class="container">
           <div class="practice-heading">
-            <div>
-              <span class="eyebrow">Áreas de atuação</span>
-              <h2>Presença jurídica onde a vida acontece.</h2>
-            </div>
-            <p>
-              Uma visão integrada entre relações familiares, sucessão e
-              proteção patrimonial.
-            </p>
+            <h2>Nossos serviços</h2>
           </div>
-          <div class="practice-list">
-            <article class="practice-item">
-              <span class="practice-number">01</span>
-              <h3>Família</h3>
-              <p>
-                Divórcio, pensão alimentícia, guarda, convivência, união
-                estável e outras questões que envolvem relações familiares.
-              </p>
-              <span class="practice-arrow">↗</span>
-            </article>
-            <article class="practice-item">
-              <span class="practice-number">02</span>
-              <h3>Sucessões</h3>
-              <p>
-                Inventários, partilhas e orientação para a transmissão e a
-                organização do patrimônio familiar.
-              </p>
-              <span class="practice-arrow">↗</span>
-            </article>
-            <article class="practice-item">
-              <span class="practice-number">03</span>
-              <h3>Patrimônio</h3>
-              <p>
-                Estratégias jurídicas para proteger, regularizar e dar
-                segurança às decisões patrimoniais.
-              </p>
-              <span class="practice-arrow">↗</span>
-            </article>
-            <article class="practice-item">
-              <span class="practice-number">04</span>
-              <h3>Imobiliário</h3>
-              <p>
-                Regularização imobiliária e análise técnica de documentos e
-                situações que envolvem imóveis.
-              </p>
-              <span class="practice-arrow">↗</span>
-            </article>
+          <nav class="practice-tabs" aria-label="Categorias de serviços">
+            <a class="is-active" href="#familia" data-category="familia" aria-current="page">Direito de Família</a>
+            <a href="#criminal" data-category="criminal">Direito Criminal</a>
+            <a href="#previdenciario" data-category="previdenciario">Direito Previdenciário</a>
+            <a href="#trabalho" data-category="trabalho">Direito do Trabalho</a>
+            <a href="#civil" data-category="civil">Direito Civil</a>
+          </nav>
+          <div class="practice-focus" aria-live="polite">
+            <h3></h3>
+            <p></p>
           </div>
+          <div class="practice-list" aria-live="polite"></div>
         </div>
       </section>
 
@@ -137,93 +121,148 @@
           <div class="profile-visual">
             <img
               class="profile-photo"
-              src="assets/images/image copy.png"
-              alt="Dra. Sabrina Alexia sentada em um ambiente claro"
+              src="assets/images/trajetoria/310804b3-5814-4225-b139-f31c59521574.jpg"
+              alt="Dra. Sabrina Alexia em seu ambiente profissional"
               loading="lazy"
             />
             <img
               class="profile-detail-photo"
-              src="assets/images/image copy 2.png"
-              alt="Retrato da Dra. Sabrina Alexia em um ambiente escuro"
+              src="assets/images/trajetoria/2c047bda-2fc9-42ef-afcb-dab165a3ce89.jpg"
+              alt="Retrato da Dra. Sabrina Alexia"
+              loading="lazy"
+            />
+            <img
+              class="profile-accent-photo"
+              src="assets/images/trajetoria/a4f5d063-b96f-4b81-876c-747bbb9be0e1.jpg"
+              alt="Dra. Sabrina Alexia em seu ambiente profissional"
               loading="lazy"
             />
           </div>
           <div class="profile-copy">
             <span class="eyebrow">Trajetória</span>
-            <h2>Conhecimento que se transforma em orientação.</h2>
-            <p>
-              Graduada em Direito pela UniPio, com pós-graduações em Direito
-              Civil e Processo Civil e em Direito de Família e Sucessões,
-              Sabrina também é Consultora e Avaliadora de Imóveis, inscrita no
-              CRECI/SE.
+            <h2 class="profile-title">
+              Uma trajetória construída com conhecimento, técnica e propósito.
+            </h2>
+            <h3 class="profile-name">Dra. Sabrina Alexia</h3>
+            <p class="profile-role">
+              OAB/SE | Sócia Fundadora • Advocacia Civil, Familiar, Sucessória e Patrimonial
             </p>
             <p>
-              É membro do IBDFAM, Presidente da Regional Barra dos
-              Coqueiros/SE do IBDFAM/SE e integra a Comissão de Direito de
-              Família e Sucessões da OAB/SE.
+              Advogada e sócia idealizadora do Sabrina Alexia Advocacia e Consultoria Jurídica, graduada em Direito pela UniPio e pós-graduada em Direito Civil e Processo Civil e em Direito de Família e Sucessões.
             </p>
-            <div class="profile-details">
-              <div class="detail">
-                <strong>Família</strong>
-                <span>Escuta atenta para relações que pedem cuidado.</span>
-              </div>
-              <div class="detail">
-                <strong>Patrimônio</strong>
-                <span>Visão técnica para proteger o que foi construído.</span>
-              </div>
-            </div>
+            <p>
+              Sua atuação é especialmente dedicada ao Direito de Família e Sucessões, abrangendo divórcio, guarda, alimentos, união estável, filiação, partilha de bens, inventários e demais questões familiares e patrimoniais. Também atua nas áreas Cível, Previdenciária, Trabalhista e Criminal, conforme as particularidades de cada caso.
+            </p>
+            <p>
+              Membro do IBDFAM, Presidente da Regional Barra dos Coqueiros/SE do IBDFAM/SE e integrante da Comissão de Direito de Família e Sucessões da OAB/SE, também atua como Consultora e Avaliadora de Imóveis, inscrita no CRECI/SE. Sua atuação reúne conhecimento jurídico, análise estratégica e acompanhamento próximo para oferecer orientação clara e segurança em cada demanda.
+            </p>
           </div>
         </div>
       </section>
-
-      <section class="credentials" aria-label="Formação e atuação institucional">
-        <div class="container credentials-grid">
-          <h2>Uma atuação ampla, com raízes no Direito Civil.</h2>
-          <div class="credential-list">
-            <p><strong>IBDFAM</strong> Membro e Presidente Regional Barra dos Coqueiros/SE.</p>
-            <p><strong>OAB/SE</strong> Comissão de Direito de Família e Sucessões.</p>
-            <p><strong>CRECI/SE</strong> Consultoria, avaliação e regularização imobiliária.</p>
-          </div>
-        </div>
-      </section>
-
       <section class="contact" id="contato">
         <div class="container contact-inner">
           <span class="eyebrow">Primeiro passo</span>
-          <h2>Vamos conversar sobre o que precisa ser resolvido?</h2>
-          <div class="contact-copy">
-            <p>
-              Conte brevemente o seu momento. A primeira conversa é o espaço
-              para entender o cenário e indicar os próximos caminhos.
-            </p>
-            <a class="button" href="mailto:contato@sabrinaalexia.adv.br">
-              Entrar em contato <span>↗</span>
-            </a>
+          <div class="contact-layout">
+            <div class="contact-copy">
+              <h2>Toda questão jurídica começa por compreender o cenário.</h2>
+              <p>
+                Conte brevemente a sua situação. A partir desse primeiro
+                contato, será possível compreender a demanda e orientar sobre
+                os próximos passos.
+              </p>
+            </div>
+            <div class="contact-actions">
+              <div class="contact-info-grid">
+                <div class="contact-info">
+                  <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                  <strong>Atendimento</strong>
+                  <span>Online e presencial</span>
+                </div>
+                <div class="contact-info">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  <strong>Localização</strong>
+                  <span>Aracaju/SE</span>
+                </div>
+                <div class="contact-info">
+                  <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                  <strong>Contato</strong>
+                  <span>WhatsApp e e-mail</span>
+                </div>
+              </div>
+              <a
+                class="button contact-button"
+                href="https://wa.me/557999128663?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20atendimento%20com%20o%20escrit%C3%B3rio%20Sabrina%20Alexia."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Falar com o escritório <span>→</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <div class="container footer-inner">
-        <p class="footer-name">Sabrina Alexia</p>
-        <p>Advocacia e Consultoria Jurídica · OAB/SE</p>
-        <p>© <span id="year"></span> Todos os direitos reservados.</p>
+      <div class="container footer-content">
+        <div class="footer-column footer-brand">
+          <p class="footer-name">Sabrina Alexia</p>
+          <p class="footer-tagline">
+            Advocacia e Consultoria Jurídica com atuação técnica,
+            individualizada e estratégica.
+          </p>
+          <p class="footer-label">Registros institucionais</p>
+          <p>OAB/SE · IBDFAM · CRECI/SE</p>
+        </div>
+        <div class="footer-column">
+          <p class="footer-label">Navegação</p>
+          <a href="#inicio">Início</a>
+          <a href="#sobre">Nossa essência</a>
+          <a href="#atuacao">Áreas de atuação</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="footer-column">
+          <p class="footer-label">Sede e Contato</p>
+          <p>Av. Augusto Maynard, 306 - São José, Aracaju - SE, 49015-380.</p>
+          <a href="tel:+5579999128663">WhatsApp: +55 79 99912-8663</a>
+          <a href="mailto:sabrinaalexiaadv@gmail.com">
+            sabrinaalexiaadv@gmail.com
+          </a>
+        </div>
+        <div class="footer-column">
+          <p class="footer-label">Horário de atendimento</p>
+          <p>Segunda a sexta-feira</p>
+          <p>09:00 às 18:00</p>
+          <a class="footer-action" href="#contato">Solicitar atendimento</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          Informativo ético: este website possui finalidade institucional e
+          informativa, em conformidade com as normas da OAB.
+        </p>
+        <p>© <span id="year"></span> Sabrina Alexia Advocacia. Todos os direitos reservados.</p>
       </div>
     </footer>
 
     <div class="whatsapp-widget">
-      <a
+      <div
         class="whatsapp-prompt"
-        href="https://wa.me/557999128663?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20melhor%20o%20escrit%C3%B3rio%20Sabrina%20Alexia."
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Conheça o escritório e fale pelo WhatsApp"
       >
+        <button class="whatsapp-close" type="button" aria-label="Fechar mensagem">
+          ×
+        </button>
         <span class="whatsapp-prompt-badge" aria-hidden="true">1</span>
-        <strong>Olá! Vamos conversar?</strong>
-        <span>Conheça o escritório Sabrina Alexia.</span>
-      </a>
+        <a
+          href="https://wa.me/557999128663?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20melhor%20o%20escrit%C3%B3rio%20Sabrina%20Alexia."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Conheça o escritório e fale pelo WhatsApp"
+        >
+          <strong>Olá! Vamos conversar?</strong>
+          <span>Conheça o escritório Sabrina Alexia.</span>
+        </a>
+      </div>
       <a
         class="whatsapp-float"
         href="https://wa.me/557999128663?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20melhor%20o%20escrit%C3%B3rio%20Sabrina%20Alexia."
@@ -237,6 +276,12 @@
           <path d="M20.5 3.5A11.8 11.8 0 0 0 12.08 0C5.55 0 .23 5.31.23 11.85c0 2.09.55 4.13 1.6 5.93L.13 24l6.37-1.67a11.83 11.83 0 0 0 5.58 1.42h.01c6.53 0 11.84-5.31 11.84-11.85 0-3.17-1.23-6.14-3.43-8.4ZM12.09 21.7h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.78.99 1.01-3.69-.23-.38a9.84 9.84 0 1 1 8.38 4.66Zm5.4-7.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-1.76-.88-2.91-1.57-4.07-3.56-.31-.53.31-.49.89-1.63.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.23 1.35.2 1.86.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" />
         </svg>
       </a>
+      <button class="whatsapp-reopen" type="button" aria-label="Reabrir mensagem do WhatsApp">
+        <span class="whatsapp-badge" aria-hidden="true">1</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.08 0C5.55 0 .23 5.31.23 11.85c0 2.09.55 4.13 1.6 5.93L.13 24l6.37-1.67a11.83 11.83 0 0 0 5.58 1.42h.01c6.53 0 11.84-5.31 11.84-11.85 0-3.17-1.23-6.14-3.43-8.4ZM12.09 21.7h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.78.99 1.01-3.69-.23-.38a9.84 9.84 0 1 1 8.38 4.66Zm5.4-7.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-1.76-.88-2.91-1.57-4.07-3.56-.31-.53.31-.49.89-1.63.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.23 1.35.2 1.86.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" />
+        </svg>
+      </button>
     </div>
 
     <script src="script.js"></script>
