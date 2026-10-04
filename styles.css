@@ -906,11 +906,10 @@ footer {
 }
 
 .footer-name {
-  color: var(--brown);
-  font-family: "IvyPresto Display", "IvyPresto", var(--serif);
-  font-size: 1.7rem;
-  line-height: 1;
+  height: auto;
   margin-bottom: 5px !important;
+  max-width: 270px;
+  width: 100%;
 }
 
 .footer-tagline {
